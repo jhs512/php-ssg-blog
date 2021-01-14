@@ -35,8 +35,8 @@
     <link rel="stylesheet" href="common.css">
     <script src="common.js" defer></script>
 
-    <link rel="stylesheet" href="about.css">
-    <script src="about.js" defer></script>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
 </head>
 
 <body>
@@ -48,18 +48,18 @@
       <div class="con height-100p flex flex-jc-sb">
         <a href="#" class="logo">
           <span><i class="far fa-lemon"></i></span>
-          <span>DESIGN LEMON</span>
+          <span>DESIGN LEMON!</span>
         </a>
         <nav class="top-bar__menu-box-1 height-100p">
           <ul class="flex height-100p">
             <li>
-              <a href="#" class="flex flex-jc-c flex-ai-c height-100p">
+              <a href="./" class="flex flex-jc-c flex-ai-c height-100p">
                 <span><i class="fas fa-home"></i></span>
                 <span>HOME</span>
               </a>
             </li>
             <li>
-              <a href="about.html" class="flex flex-jc-c flex-ai-c height-100p">
+              <a href="about.php" class="flex flex-jc-c flex-ai-c height-100p">
                 <span><i class="far fa-address-card"></i></span>
                 <span>ABOUT</span>
               </a>
@@ -139,33 +139,3 @@
     <!-- 모바일 사이드 바 끝 -->
   
     <main>
-      <section class="section-title con-min-width">
-        <h1 class="con">
-          <span>
-            <i class="fas fa-fire"></i>
-          </span>
-          <span>
-            ABOUT
-          </span>
-        </h1>
-      </section>
-  
-      
-  
-    </main>
-  
-    <!-- 하단바 시작 -->
-    <footer class="bottom-bar con-min-width">
-      <div class="con flex flex-jc-c">
-        <a href="#" class="logo">
-          <span><i class="far fa-lemon"></i></span>
-          <span>DESIGN LEMON</span>
-        </a>
-      </div>
-    </footer>
-    <!-- 하단바 끝 -->
-  
-  </div>
-</body>
-
-</html>
