@@ -1,8 +1,3 @@
-<?php
-require_once "data.php";
-require_once "head.php";
-?>
-
 <link rel="stylesheet" href="css/about.css">
 <script src="js/about.js" defer></script>
 
@@ -34,7 +29,3 @@ require_once "head.php";
         </div>
     </div>
 </section>
-
-<?php
-require_once "foot.php";
-?>

@@ -1,6 +1,17 @@
 <?php
 $siteTitle = "디자이너 홍길동!!!!";
 
+// 게시물 3
+$article3 = [];
+$article3["title"] = "자바스크립트 태그 3";
+$article3["regDate"] = "2020-01-12 12:12:15";
+$article3["writerName"] = "홍길동";
+$article3["writerAvatar"] = '<svg viewBox="0 0 264 280"><use xlink:href="#avatar-1"></use></svg>';
+$article3["body"] = <<<EOT
+# 개요
+- php도 좋다.
+EOT;
+
 // 게시물 2
 $article2 = [];
 $article2["title"] = "자바스크립트 태그 2";
