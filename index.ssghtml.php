@@ -21,7 +21,7 @@ require_once "head.php";
     <div class="article-list-box">
       <ul>
         <li>
-          <h1 class="article-list-box__title"><?=$article2["title"]?></h1>
+          <h1 class="article-list-box__title"><a href="article_detail_2.ssghtml.php"><?=$article2["title"]?></a></h1>
           <div class="article-list-box__reg-date"><?=$article2["regDate"]?></div>
           <div class="article-list-box__writer">
             <span><?=$article2["writerName"]?></span>
@@ -34,7 +34,7 @@ require_once "head.php";
         </li>
 
         <li>
-          <h1 class="article-list-box__title"><?=$article1["title"]?></h1>
+          <h1 class="article-list-box__title"><a href="article_detail_1.ssghtml.php"><?=$article1["title"]?></a></h1>
           <div class="article-list-box__reg-date"><?=$article1["regDate"]?></div>
 
           <div class="article-list-box__writer">

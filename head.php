@@ -43,7 +43,7 @@
     <!-- 탑바 시작 -->
     <header class="top-bar con-min-width visible-md-up">
       <div class="con height-100p flex flex-jc-sb">
-        <a href="#" class="logo">
+        <a href="index.ssghtml.php" class="logo">
           <span><i class="far fa-lemon"></i></span>
           <span>DESIGN LEMON!</span>
         </a>

@@ -45,3 +45,8 @@ https://codepen.io/jangka44/embed/zYKmvoG?height=300&theme-id=light&default-tab=
 CmgCsCkjNWo
 ```
 EOT;
+
+if ( isset($articleId) ) {
+    $articleVarName = "article" . $articleId;
+    $selectedArticle = $$articleVarName;
+}
