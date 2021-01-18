@@ -1,8 +1,21 @@
 <?php
 $siteTitle = "디자이너 홍길동!!!!";
 
+// 게시물 4
+$article4 = [];
+$article4["id"] = 4;
+$article4["title"] = "자바스크립트 태그 4";
+$article4["regDate"] = "2020-01-18 17:28:15";
+$article4["writerName"] = "홍길동";
+$article4["writerAvatar"] = '<svg viewBox="0 0 264 280"><use xlink:href="#avatar-1"></use></svg>';
+$article4["body"] = <<<EOT
+# 개요
+- 안녕하세요.
+EOT;
+
 // 게시물 3
 $article3 = [];
+$article3["id"] = 3;
 $article3["title"] = "자바스크립트 태그 3";
 $article3["regDate"] = "2020-01-12 12:12:15";
 $article3["writerName"] = "홍길동";
@@ -14,6 +27,7 @@ EOT;
 
 // 게시물 2
 $article2 = [];
+$article2["id"] = 2;
 $article2["title"] = "자바스크립트 태그 2";
 $article2["regDate"] = "2020-01-12 12:12:14";
 $article2["writerName"] = "홍길동";
@@ -36,6 +50,7 @@ EOT;
 
 // 게시물 1
 $article1 = [];
+$article1["id"] = 1;
 $article1["title"] = "자바스크립트 태그";
 $article1["regDate"] = "2020-01-12 12:12:14";
 $article1["writerName"] = "홍길동";
