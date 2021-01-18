@@ -343,6 +343,17 @@ a {
   border-top: 2px dotted black;
   padding-top: 20px;
   padding-bottom: 20px;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.article-list-box__title > a {
+  font-size: 1.8rem;
+  text-decoration: underline;
+}
+
+.article-list-box__title > a:hover {
+  color:red;
 }
 
 .article-list-box__reg-date::before {

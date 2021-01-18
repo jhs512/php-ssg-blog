@@ -20,8 +20,8 @@ require_once "head.php";
   <div class="con">
     <div class="article-list-box">
       <ul>
-      <li>
-          <h1 class="article-list-box__title"><a href="article_detail_2.ssghtml.php"><?=$article3["title"]?></a></h1>
+        <li>
+          <h1 class="article-list-box__title"><a href="article_detail_3.ssghtml.php"><?=$article3["title"]?></a></h1>
           <div class="article-list-box__reg-date"><?=$article3["regDate"]?></div>
           <div class="article-list-box__writer">
             <span><?=$article3["writerName"]?></span>
