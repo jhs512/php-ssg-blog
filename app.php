@@ -1,6 +1,19 @@
 <?php
 
-$a = 10;
+function getFilesByEndsWith($endsWith) {
+
+    $fileNames = [];
+
+    $it = new RecursiveDirectoryIterator(".");
+
+    foreach(new RecursiveIteratorIterator($it) as $file) {
+        if ( endsWith($file->getFilename(), $endsWith) ) {
+            $fileNames[] = $file->getFilename();
+        }
+    }
+
+    return $fileNames;
+}
 
 function getMaxArticleId() {
     static $maxId;
