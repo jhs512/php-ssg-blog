@@ -1,9 +1,4 @@
 <?php
-require_once "data.php";
-require_once "head.php";
-
-$tag = "html";
-
 $articles = getArticlesByTag($tag);
 ?>
 
@@ -13,7 +8,7 @@ $articles = getArticlesByTag($tag);
             <i class="fas fa-list"></i>
         </span>
         <span>
-            LIST
+            `<?=$tag?>` LIST
         </span>
     </h1>
 </section>
@@ -39,7 +34,3 @@ $articles = getArticlesByTag($tag);
         </div>
     </div>
 </section>
-
-<?php
-require_once "foot.php";
-?>
