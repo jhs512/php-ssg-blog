@@ -1,5 +1,6 @@
-<link rel="stylesheet" href="css/about.css">
-<script src="js/about.js" defer></script>
+<?php
+$selectedArticle = getArticleById($articleId);
+?>
 
 <section class="section-title con-min-width">
     <h1 class="con">

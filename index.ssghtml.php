@@ -1,6 +1,8 @@
 <?php
 require_once "data.php";
 require_once "head.php";
+
+$articles = getArticles();
 ?>
 <link rel="stylesheet" href="css/index.css">
 <script src="js/index.js" defer></script>
@@ -20,11 +22,7 @@ require_once "head.php";
   <div class="con">
     <div class="article-list-box">
       <ul>
-        <?php for ( $i = 4; $i >= 1; $i-- ) { ?>
-        <?php
-        $articleVarName = "article" . $i;
-        $article = $$articleVarName;
-        ?>
+        <?php foreach ( $articles as $article ) { ?>
         <li>
           <h1 class="article-list-box__title"><a href="article_detail_<?=$article["id"]?>.ssghtml.php"><?=$article["title"]?></a></h1>
           <div class="article-list-box__reg-date"><?=$article["regDate"]?></div>

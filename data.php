@@ -1,4 +1,7 @@
 <?php
+require_once "util.php";
+require_once "app.php";
+
 $siteTitle = "디자이너 홍길동!!!!";
 
 // 게시물 4
@@ -8,6 +11,7 @@ $article4["title"] = "자바스크립트 태그 4";
 $article4["regDate"] = "2020-01-18 17:28:15";
 $article4["writerName"] = "홍길동";
 $article4["writerAvatar"] = '<svg viewBox="0 0 264 280"><use xlink:href="#avatar-1"></use></svg>';
+$article4["tags"] = ["js", "css"];
 $article4["body"] = <<<EOT
 # 개요
 - 안녕하세요.
@@ -20,6 +24,7 @@ $article3["title"] = "자바스크립트 태그 3";
 $article3["regDate"] = "2020-01-12 12:12:15";
 $article3["writerName"] = "홍길동";
 $article3["writerAvatar"] = '<svg viewBox="0 0 264 280"><use xlink:href="#avatar-1"></use></svg>';
+$article3["tags"] = ["js", "html"];
 $article3["body"] = <<<EOT
 # 개요
 - php도 좋다.
@@ -32,6 +37,7 @@ $article2["title"] = "자바스크립트 태그 2";
 $article2["regDate"] = "2020-01-12 12:12:14";
 $article2["writerName"] = "홍길동";
 $article2["writerAvatar"] = '<svg viewBox="0 0 264 280"><use xlink:href="#avatar-1"></use></svg>';
+$article2["tags"] = ["js"];
 $article2["body"] = <<<EOT
 # 개요
 - script 태그를 사용해야 한다.
@@ -55,6 +61,7 @@ $article1["title"] = "자바스크립트 태그";
 $article1["regDate"] = "2020-01-12 12:12:14";
 $article1["writerName"] = "홍길동";
 $article1["writerAvatar"] = '<svg viewBox="0 0 264 280"><use xlink:href="#avatar-1"></use></svg>';
+$article1["tags"] = ["js"];
 $article1["body"] = <<<EOT
 # 태그
 ```codepen
@@ -71,8 +78,3 @@ https://codepen.io/jangka44/embed/zYKmvoG?height=300&theme-id=light&default-tab=
 CmgCsCkjNWo
 ```
 EOT;
-
-if ( isset($articleId) ) {
-    $articleVarName = "article" . $articleId;
-    $selectedArticle = $$articleVarName;
-}
