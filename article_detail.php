@@ -1,5 +1,8 @@
 <?php
-$selectedArticle = getArticleById($articleId);
+require_once "data.php";
+require_once "head.php";
+
+$selectedArticle = getArticleById($_GET['id']);
 ?>
 
 <section class="section-title con-min-width">
@@ -49,3 +52,7 @@ $selectedArticle = getArticleById($articleId);
     </script>
     </div>
 </section>
+
+<?php
+require_once "foot.php";
+?>

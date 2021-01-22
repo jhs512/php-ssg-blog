@@ -1,5 +1,9 @@
 <?php
 
+function getArticleLink($id) {
+    return "article_detail.php?id={$id}";
+}
+
 function getFilesByEndsWith($endsWith) {
 
     $fileNames = [];
