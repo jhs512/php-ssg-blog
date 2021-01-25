@@ -2,7 +2,7 @@
 require_once "data.php";
 require_once "head.php";
 
-$articles = getArticlesByTag($_GET['tag']);
+$articles = &getArticlesByTag($_GET['tag']);
 ?>
 
 <section class="section-title con-min-width">

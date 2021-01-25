@@ -43,42 +43,24 @@ function getMaxArticleId() {
     return $maxId;
 }
 
-function getArticles() {
-    static $articles;
+function &getArticles() {
+    global $_allArticles;
 
-    if ( $articles !== null ) {
-        return $articles;
-    }
-
-    $maxArticleId = getMaxArticleId();
-
-    $articles = [];
-
-    for ( $i = $maxArticleId; $i > 0; $i-- ) {
-        $key = "article" . $i;
-
-        $articles[$i] = $GLOBALS[$key];
-    }
-
-    return $articles;
+    return $_allArticles;
 }
 
 function getArticleById($id) {
-    $articles = getArticles();
+    $articles = &getArticles();
 
     return $articles[$id];
 }
 
-function getArticlesByTag($tag) {
-    $articles = getArticles();
+function &getArticlesByTag($tag) {
+    global $_allArticlesByTag;
 
-    $filterdArticles = [];
-
-    foreach ( $articles as $article ) {
-        if ( in_array($tag, $article['tags']) ) {
-            $filterdArticles[$article['id']] = $article;
-        }
+    if ( isset($_allArticlesByTag[$tag]) == false ) {
+        return [];
     }
 
-    return $filterdArticles;
+    return $_allArticlesByTag[$tag];
 }

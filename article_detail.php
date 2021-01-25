@@ -2,7 +2,7 @@
 require_once "data.php";
 require_once "head.php";
 
-$selectedArticle = getArticleById($_GET['id']);
+$selectedArticle = &getArticleById($_GET['id']);
 ?>
 
 <section class="section-title con-min-width">
