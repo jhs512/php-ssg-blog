@@ -1,7 +1,11 @@
 <?php
 
 function getArticleLink($id) {
-    return "article_detail.php?id={$id}";
+    return "article_detail.ssghtml.php?id={$id}&ext=html";
+}
+
+function getArticleListByTagLink($tag) {
+    return "article_list_by_tag.ssghtml.php?tag={$tag}&ext=html";
 }
 
 function getFilesByEndsWith($endsWith) {
@@ -49,7 +53,7 @@ function &getArticles() {
     return $_allArticles;
 }
 
-function getArticleById($id) {
+function &getArticleById($id) {
     $articles = &getArticles();
 
     return $articles[$id];
@@ -63,4 +67,10 @@ function &getArticlesByTag($tag) {
     }
 
     return $_allArticlesByTag[$tag];
+}
+
+function &getTags() {
+    global $_tags;
+
+    return $_tags;
 }

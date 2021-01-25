@@ -1,4 +1,8 @@
 <?php
+if ( defined('STDIN') ) {
+    $_GET['tag'] = $argv[1];
+}
+
 require_once "data.php";
 require_once "head.php";
 
