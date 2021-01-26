@@ -97,7 +97,6 @@ for ( $i = $maxArticleId; $i > 0; $i-- ) {
     }
 }
 
-
 $_tags = array_unique($_tags);
 sort($_tags);
 
