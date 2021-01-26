@@ -1,5 +1,18 @@
 <?php
 
+function getArticleTagsHtml($id) {
+    $article = &getArticleById($id);
+
+    $html = "";
+
+    foreach ( $article['tags'] as $tag ) {
+        $link = getArticleListByTagLink($tag);
+        $html .= " <a class=\"tag-link\" href=\"{$link}\">#" . $tag . "</a>";
+    }
+
+    return $html;
+}
+
 function getArticleLink($id) {
     return "article_detail.ssghtml.php?id={$id}&ext=html";
 }

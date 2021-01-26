@@ -30,6 +30,9 @@ $articles = &getArticles();
             <span><?=$article["writerName"]?></span>
             <span><?=$article["writerAvatar"]?></span>
           </div>
+          <div class="article-list-box__tags">
+            <?=getArticleTagsHtml($article["id"])?>
+          </div>
           <div class="article-list-box__body">
             <script type="text/x-template"><?=$article['body']?></script>
             <div class="toast-ui-viewer"></div>

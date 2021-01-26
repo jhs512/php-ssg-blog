@@ -31,6 +31,10 @@ $selectedArticle = &getArticleById($articleId);
             <span><?=$selectedArticle["writerName"]?></span>
             <span><?=$selectedArticle["writerAvatar"]?></span>
         </div>
+
+        <div class="article-list-box__tags">
+            <?=getArticleTagsHtml($selectedArticle["id"])?>
+        </div>
         
         <div class="article-list-box__body">
             <script type="text/x-template"><?=$selectedArticle['body']?></script>
