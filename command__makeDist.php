@@ -4,7 +4,7 @@ require_once "data.php";
 shell_exec("chcp 65001");
 
 $srcPath = __DIR__;
-$distPath = $srcPath . '/dist';
+$distPath = $srcPath . '/docs';
 $compileNo = 0;
 
 function compile($originFile) {
@@ -75,9 +75,11 @@ function adaptForStatic($distFileName) {
     file_put_contents($distFileName, $newSource);
 }
 
+@mkdir("docs");
+
 $originFiles = getFiles();
 
-deleteDirectory("dist");
+deleteDirectory("docs");
 
 foreach ( $originFiles as $index => $originFile ) {
     $fileName = basename($originFile);

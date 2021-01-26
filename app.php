@@ -38,7 +38,7 @@ function getFiles() {
             continue;
         }
 
-        if ( strpos($file->getRealPath(), '\dist') !== false ) {
+        if ( strpos($file->getRealPath(), '\docs') !== false ) {
             continue;
         }
 
