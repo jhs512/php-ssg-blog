@@ -67,7 +67,7 @@ $article1["body"] = <<<'EOT'
 ```codepen
 https://codepen.io/jangka44/embed/NWROGrL?height=265&theme-id=light&default-tab=html,result&editable=true
 ```
-  
+
 # 콘솔
 ```codepen
 https://codepen.io/jangka44/embed/zYKmvoG?height=300&theme-id=light&default-tab=js,result&editable=true
