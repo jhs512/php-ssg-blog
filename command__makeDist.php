@@ -17,7 +17,7 @@ function compile($originFile) {
         foreach ( $articles as $article ) {
             $originFileAndOpt = $originFile . " " . $article['id'];
 
-            $distFile = str_replace(".ssghtml.php", "_{$article['id']}_.html", $originFile);
+            $distFile = str_replace(".ssghtml.php", "_{$article['id']}.html", $originFile);
         
             compileItem($originFileAndOpt, $distFile);
         }
@@ -28,13 +28,20 @@ function compile($originFile) {
         foreach ( $tags as $tag ) {
             $originFileAndOpt = $originFile . " " . $tag;
 
-            $distFile = str_replace(".ssghtml.php", "_{$tag}_.html", $originFile);
+            $distFile = str_replace(".ssghtml.php", "_{$tag}.html", $originFile);
 
             compileItem($originFileAndOpt, $distFile);
         }
     }
-    else {
+    else if ( endsWith($originFileName, ".ssghtml.php") ) {
         $distFile = str_replace(".ssghtml.php", ".html", $originFile);
+        compileItem($originFileAndOpt, $distFile);
+    }
+    else if ( endsWith($originFileName, ".php") ) {
+        return;
+    }
+    else {
+        $distFile = $originFile;
         compileItem($originFileAndOpt, $distFile);
     }
 }
@@ -45,6 +52,12 @@ function compileItem($originFileAndOpt, $distFile) {
     global $distPath;
 
     $distFile = str_replace($srcPath, $distPath, $distFile);
+
+    $distDirPath = dirname($distFile);
+
+    if ( is_dir($distDirPath) == false ) {
+        mkdir($distDirPath, 0777, true);
+    }
 
     $command = "c:\\xampp\\php\\php.exe {$originFileAndOpt} > {$distFile}";
 
@@ -62,8 +75,16 @@ function adaptForStatic($distFileName) {
     file_put_contents($distFileName, $newSource);
 }
 
-$originFiles = getFilesByEndsWith(".ssghtml.php");
+$originFiles = getFiles();
+
+deleteDirectory("dist");
 
 foreach ( $originFiles as $index => $originFile ) {
-    compile($srcPath . '/' . $originFile);
+    $fileName = basename($originFile);
+
+    if ( $fileName == "CNAME" ) {
+        continue;
+    }
+
+    compile($originFile);
 }

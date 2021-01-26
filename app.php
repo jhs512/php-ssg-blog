@@ -23,6 +23,31 @@ function getFilesByEndsWith($endsWith) {
     return $fileNames;
 }
 
+function getFiles() {
+
+    $fileNames = [];
+
+    $it = new RecursiveDirectoryIterator(".");
+
+    foreach(new RecursiveIteratorIterator($it) as $file) {
+        if ( $file->isDir() ) {
+            continue;
+        }
+
+        if ( strpos($file->getRealPath(), '\.git') !== false ) {
+            continue;
+        }
+
+        if ( strpos($file->getRealPath(), '\dist') !== false ) {
+            continue;
+        }
+
+        $fileNames[] = $file->getRealPath();
+    }
+
+    return $fileNames;
+}
+
 function getMaxArticleId() {
     static $maxId;
 
