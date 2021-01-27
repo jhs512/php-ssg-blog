@@ -10,13 +10,10 @@ $siteThumbUrl = "https://ssg-2020-12.oa.gg/img/logo/logo_opengraph.png";
 
 // 태그정보 시작
 $tagInfos = [
-    "js" => [
-        //"pageThumbUrl" => "자바스크립트 관련 글 전용 이미지"
+    "flex" => [
+        "pageThumbUrl" => "자바스크립트 관련 글 전용 이미지",
         //"pageDescription" => "2021년 특별기획, 자바스크립트 관련 강좌 입니다."
     ],
-    "html" => [
-        //"pageThumbUrl" => "html 관련 글 전용 이미지"
-    ]
 ];
 // 태그정보 끝
 
