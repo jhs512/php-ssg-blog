@@ -8,6 +8,11 @@
   <link rel="stylesheet" href="index.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="index.js" defer></script>
+  <script>
+    // 주소 뒤에 / 를 붙여주는 코드
+    // 오직 index.html 에만 넣어주세요.
+    if ( location.pathname.substr(-10, 10) != 'index.html' && location.pathname.substr(-1, 1) != '/' ) { location.replace(location.href + '/'); }
+  </script>
 </head>
 <body>
   <img src="https://cdn.jsdelivr.net/gh/jhs512/php-ssg-blog/pf/mobile/img/bn_1.jpg" alt="">
