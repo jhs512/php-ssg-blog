@@ -12,9 +12,7 @@ require_once "head.php";
   </div>
 </section>
 
-<section class="section-bn-1 con-min-width">
-  <div class="con"><img class="block w-full" src="https://picsum.photos/id/237/1200/500" alt=""></div>
-</section>
+<?php require "part.section_bn_1.php" ?>
 
 <?php
 require_once "foot.php";
