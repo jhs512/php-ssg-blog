@@ -80,7 +80,7 @@
   <?php
   $titleBarVisible = true;
 
-  if ( $pageCode == 'home' ) {
+  if ( $pageCode == 'home' || $pageCode == 'companyInfo' ) {
     $titleBarVisible = false;
   }
   ?>
