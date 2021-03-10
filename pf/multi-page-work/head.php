@@ -77,8 +77,17 @@
     </div>
   </header>
 
+  <?php
+  $titleBarVisible = true;
+
+  if ( $pageCode == 'home' ) {
+    $titleBarVisible = false;
+  }
+  ?>
+  <?php if ( $titleBarVisible ) { ?>
   <section class="title-bar con-min-width">
     <h1 class="con font-bold text-4xl">
       <?=$title?>
     </h1>
   </section>
+  <?php } ?>
