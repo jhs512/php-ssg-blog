@@ -1,5 +1,6 @@
 <?php
 $title = "HOME";
+$pageCode = "home";
 
 require_once "head.php";
 ?>

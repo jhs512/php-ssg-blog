@@ -38,3 +38,7 @@ html {
 .con {
   width:var(--site-width);
 }
+
+.top-bar__menu-box > ul > li > a.active {
+  color:red;
+}

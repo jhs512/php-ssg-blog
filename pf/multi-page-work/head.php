@@ -31,20 +31,44 @@
 
       <div class="flex-grow"></div>
 
+      <?php
+      $aClassStrBase = "h-full flex items-center px-4 hover:bg-white hover:text-gray-700";
+      ?>
       <nav class="top-bar__menu-box">
         <ul class="flex h-full">
+          <?php
+          $aClassStr = $aClassStrBase;
+
+          if ( $pageCode == "home" ) {
+            $aClassStr .= " active";
+          }
+          ?>
           <li>
-            <a class="h-full flex items-center px-4 hover:bg-white hover:text-gray-700" href="index.ssghtml.php">
+            <a class="<?=$aClassStr?>" href="index.ssghtml.php">
               <span class="font-bold">HOME</span>
             </a>
           </li>
+          <?php
+          $aClassStr = $aClassStrBase;
+
+          if ( $pageCode == "companyInfo" ) {
+            $aClassStr .= " active";
+          }
+          ?>
           <li>
-            <a class="h-full flex items-center px-4 hover:bg-white hover:text-gray-700" href="company_info.ssghtml.php">
+            <a class="<?=$aClassStr?>" href="company_info.ssghtml.php">
               <span class="font-bold">COMPANY INFO</span>
             </a>
           </li>
+          <?php
+          $aClassStr = $aClassStrBase;
+
+          if ( $pageCode == "vision" ) {
+            $aClassStr .= " active";
+          }
+          ?>
           <li>
-            <a class="h-full flex items-center px-4 hover:bg-white hover:text-gray-700" href="vision.ssghtml.php">
+            <a class="<?=$aClassStr?>" href="vision.ssghtml.php">
               <span class="font-bold">VISION</span>
             </a>
           </li>
