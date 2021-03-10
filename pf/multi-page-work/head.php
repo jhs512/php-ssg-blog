@@ -40,7 +40,7 @@
           $aClassStr = $aClassStrBase;
 
           if ( $pageCode == "home" ) {
-            $aClassStr .= " active text-red-500";
+            $aClassStr .= " active text-red-500 bg-white";
           }
           ?>
           <li>
@@ -52,7 +52,7 @@
           $aClassStr = $aClassStrBase;
 
           if ( $pageCode == "companyInfo" ) {
-            $aClassStr .= " active text-red-500";
+            $aClassStr .= " active text-red-500 bg-white";
           }
           ?>
           <li>
@@ -64,7 +64,7 @@
           $aClassStr = $aClassStrBase;
 
           if ( $pageCode == "vision" ) {
-            $aClassStr .= " active text-red-500";
+            $aClassStr .= " active text-red-500 bg-white";
           }
           ?>
           <li>
