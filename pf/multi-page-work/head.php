@@ -78,10 +78,10 @@
   </header>
 
   <?php
-  $titleBarVisible = true;
+  $titleBarVisible = false;
 
   if ( $pageCode == 'home' || $pageCode == 'companyInfo' ) {
-    $titleBarVisible = false;
+    $titleBarVisible = true;
   }
   ?>
   <?php if ( $titleBarVisible ) { ?>
