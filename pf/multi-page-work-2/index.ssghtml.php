@@ -12,7 +12,18 @@ require_once "head.php";
   }
 </script>
 
-<h1>홈</h1>
+<style>
+  .section-1 {
+    height:100vh;
+  }
+</style>
+
+<section class="section-1" style="background-image:url(https://i.picsum.photos/id/237/1920/1200.jpg?hmac=0hGBRCcdnSj1_Ii-eHDkkD9bslWK3xXPME2Hm2VuKiA);">
+
+</section>
+
+<section class="section-2 h-96 bg-red-500"></section>
+<section class="section-2 h-96 bg-green-500"></section>
 
 <?php
 require_once "foot.php";
