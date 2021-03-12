@@ -1,4 +1,6 @@
 <?php
+$pageTitle = "홈";
+$pageCode = "home";
 require_once "head.php";
 ?>
 <script>
@@ -9,7 +11,9 @@ require_once "head.php";
     location.replace(location.href + '/');
   }
 </script>
-<h1>안녕</h1>
+
+<h1>홈</h1>
+
 <?php
 require_once "foot.php";
 ?>
