@@ -9,8 +9,11 @@
 
   <script>
     // 주소 뒤에 / 를 붙여주는 코드
-    // 오직 index.html 에만 넣어주세요.
-    if ( location.pathname.substr(-10, 10) != 'index.html' && location.pathname.substr(-1, 1) != '/' ) { location.replace(location.href + '/'); }
+    // 오직 index.html, index.html 에도 추가해주세요.
+    if (location.href.indexOf('index.html') === -1 && location.href.indexOf('index.html') === -1 &&
+      location.href.substr(-1, 1) !== '/') {
+      location.replace(location.href + '/');
+    }
   </script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
